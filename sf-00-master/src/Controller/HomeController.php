@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class HomeController extends AbstractController
 {
-    #[Route('/{name}', name: 'home', methods: ['GET'])] // Ceci est une annotation PHP, ici elle permet de définir une route pour le contrôleur et ses paramètres.
+    #[Route('/', name: 'home', methods: ['GET'])] // Ceci est une annotation PHP, ici elle permet de définir une route pour le contrôleur et ses paramètres.
     public function index(): Response // Ceci est le contrôleur qui va être appelé lorsque l'utilisateur accède à la page '/'
     {
         $name = ''; // À l'aide de la classe Request de HttpFoundation, on peut récupérer les paramètres de la route.
